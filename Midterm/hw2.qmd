@@ -1,5 +1,5 @@
 ---
-title: "Midterm Q1 & Q2"
+title: "Midterm Q1-Q2"
 author: "Wen Sheng (ws2840)"
 date: today
 format:
@@ -19,22 +19,46 @@ editor:
   render-on-save: true
 ---
 
-## Q1
-
+## Problem 1
+The following code simulates and plots 5000 trajectories of Geometric Brownian motion with starting value $X_0=100$, growth rate$\mu = 0.10$, and volatility $\sigma = 0.21$.
 ```{python}
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 
-print("hello")
+n_paths = 5000
+n_steps = 100
+T = 1.0
+dt = T / n_steps
+Sqrtdt=np.sqrt(dt)
+rng = np.random.default_rng() #initialize rand numb generator
+X = np.zeros((n_paths, n_steps+1)) #Allocate a zero array of trajectories
+
+#GBM setup
+X0 = 100
+mu = 0.10
+sigma = 0.21
+
+X[:, 0] = X0 # initial starting point to X0
+for i in range(n_paths):
+    for j in range(1,n_steps+1):
+      z = rng.normal(loc=0, scale=1)
+      # Assign a value based on the row (i) and column (j) index
+      X[i, j] = X[i, j-1] * np.exp((mu - 0.5 * sigma**2) * dt + sigma * Sqrtdt * z)
+
+# Time axis (n_steps+1) steps from 0 to T
+t = np.linspace(0, T, n_steps + 1)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.plot(t, X.T, alpha=0.5, color='blue') 
+plt.title('5000 Geometric Brownian Motion Trajectories')
+plt.xlabel('Time t')
+plt.ylabel('X(t)')
+plt.grid(True)
+plt.show()
 ```
 
-## Q2
+## Problem 2
 
 ```{python}
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-
-print("hello")
 ```
