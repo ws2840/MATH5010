@@ -65,7 +65,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def BlackScholesStocks(callput, S, K, r, sigma, T, q=0.0):
-    # d1 = (ln(s/k) + (r-q + 1/2 * sigma^2)T)/(sigma^sqrt(T))
+    # d1 = (ln(s/k) + (r-q + 1/2 * sigma^2)T)/(sigma*sqrt(T))
     d1 = (math.log(S / K) + (r - q + 0.5 * sigma**2) * T) / (sigma * math.sqrt(T))
     d2 = d1 - sigma * math.sqrt(T)
     if callput == 'c':
