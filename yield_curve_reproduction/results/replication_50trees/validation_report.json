@@ -1,0 +1,156 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "check": "Input checksum: data/raw/yield_monthly.csv",
+      "result": "PASS"
+    },
+    {
+      "check": "Input checksum: data/raw/fred_md_2025_07.csv",
+      "result": "PASS"
+    },
+    {
+      "check": "Input checksum: data/raw/fred_md_2026_07.csv",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: fetch_data.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: make_report.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: run.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: src/yieldcurve/__init__.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: src/yieldcurve/curves.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: src/yieldcurve/data.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: src/yieldcurve/evaluate.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: src/yieldcurve/forecast.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: src/yieldcurve/trading.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: tests/test_scientific_checks.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: tune.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Source checksum: validate_results.py",
+      "result": "PASS"
+    },
+    {
+      "check": "All predictions and observations are finite",
+      "result": "PASS"
+    },
+    {
+      "check": "No duplicate forecast keys",
+      "result": "PASS"
+    },
+    {
+      "check": "Every forecast destination has the stated horizon",
+      "result": "PASS"
+    },
+    {
+      "check": "No training labels after their forecast origins",
+      "result": "PASS"
+    },
+    {
+      "check": "All configured model/horizon/target metrics exist",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete aligned OOS sample for horizon 1",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete aligned OOS sample for horizon 3",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete aligned OOS sample for horizon 6",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete aligned OOS sample for horizon 12",
+      "result": "PASS"
+    },
+    {
+      "check": "Current values agree with original yield source",
+      "result": "PASS"
+    },
+    {
+      "check": "Realizations agree with original yield source",
+      "result": "PASS"
+    },
+    {
+      "check": "Random walk uses only the origin observation",
+      "result": "PASS"
+    },
+    {
+      "check": "RMSEs and DM p-values are finite",
+      "result": "PASS"
+    },
+    {
+      "check": "DM p-values lie in [0,1]",
+      "result": "PASS"
+    },
+    {
+      "check": "Factor/RW 24-120 slopes equal predicted yield differences",
+      "result": "PASS"
+    },
+    {
+      "check": "Factor/RW 24-360 slopes equal predicted yield differences",
+      "result": "PASS"
+    },
+    {
+      "check": "Factor/RW 60-360 slopes equal predicted yield differences",
+      "result": "PASS"
+    },
+    {
+      "check": "Trading returns and scaling estimates are finite",
+      "result": "PASS"
+    },
+    {
+      "check": "Trading exposures respect the cap",
+      "result": "PASS"
+    },
+    {
+      "check": "Net trading accounting reconciles",
+      "result": "PASS"
+    },
+    {
+      "check": "Each round trip uses the stated transaction cost",
+      "result": "PASS"
+    }
+  ],
+  "forecast_rows": 111462,
+  "metric_rows": 780,
+  "scientific_unit_tests": {
+    "result": "PASS",
+    "command": "python -m unittest discover -s tests -v",
+    "count": 10
+  }
+}

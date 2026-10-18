@@ -1,0 +1,15 @@
+test_dm_identical_forecasts_has_no_significance (test_scientific_checks.ScientificChecks.test_dm_identical_forecasts_has_no_significance) ... ok
+test_flat_unchanged_curve_has_only_carry_roll_return (test_scientific_checks.ScientificChecks.test_flat_unchanged_curve_has_only_carry_roll_return) ... ok
+test_hac_allows_fifth_lag_with_125_observations (test_scientific_checks.ScientificChecks.test_hac_allows_fifth_lag_with_125_observations) ... ok
+test_imputation_uses_only_training_values (test_scientific_checks.ScientificChecks.test_imputation_uses_only_training_values) ... ok
+test_macro_code_six_distinguishes_both_conventions (test_scientific_checks.ScientificChecks.test_macro_code_six_distinguishes_both_conventions) ... ok
+test_ols_recovers_exact_synthetic_curve (test_scientific_checks.ScientificChecks.test_ols_recovers_exact_synthetic_curve) ... ok
+test_publication_lags_exclude_recent_macro_data (test_scientific_checks.ScientificChecks.test_publication_lags_exclude_recent_macro_data) ... ok
+test_steepener_has_zero_entry_dv01_and_correct_sign (test_scientific_checks.ScientificChecks.test_steepener_has_zero_entry_dv01_and_correct_sign) ... ok
+test_training_labels_and_predictions_cannot_use_future (test_scientific_checks.ScientificChecks.test_training_labels_and_predictions_cannot_use_future) ... ok
+test_unscaled_optimizer_improves_a_known_fit_and_obeys_bounds (test_scientific_checks.ScientificChecks.test_unscaled_optimizer_improves_a_known_fit_and_obeys_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.115s
+
+OK

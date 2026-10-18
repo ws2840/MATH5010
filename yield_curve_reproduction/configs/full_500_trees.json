@@ -1,0 +1,61 @@
+{
+  "sample_start": "1986-05",
+  "oos_origin_start": "2015-01",
+  "oos_origin_end": "2025-05",
+  "window_months": 344,
+  "horizons": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "yield_predictor_maturities": [
+    3,
+    6,
+    12,
+    18,
+    24,
+    36,
+    60,
+    120,
+    240,
+    360
+  ],
+  "macro_file": "fred_md_2025_07.csv",
+  "macro_transformation": "paper",
+  "forest_trees": 500,
+  "seed": 42,
+  "signal_calibration_months": 24,
+  "transaction_cost_one_way_bp": 1,
+  "models": [
+    "Direct-RF",
+    "Direct-RF-X",
+    "DNS-AR",
+    "DNS-RF",
+    "DNS-RF-X",
+    "DNSS-AR",
+    "DNSS-RF",
+    "DNSS-RF-X",
+    "DNSS-AR-PSO",
+    "DNSS-RF-PSO",
+    "DNSS-RF-PSO-X",
+    "DNSS-AR-fixedPSO",
+    "DNSS-RF-fixedPSO",
+    "DNSS-RF-fixedPSO-X"
+  ],
+  "pso": {
+    "particles": 300,
+    "iterations": 1000,
+    "local_particles": 10,
+    "stall_tolerance": 1e-08,
+    "stall_iterations": 50,
+    "inertia_start": 0.9,
+    "inertia_end": 0.4,
+    "c1": 2.0,
+    "c2": 2.0,
+    "velocity_fraction": 0.2,
+    "seed": 42,
+    "objective_scale": 1.0
+  },
+  "ar_origin_lag": 0
+}

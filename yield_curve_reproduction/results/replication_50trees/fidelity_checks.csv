@@ -1,0 +1,7 @@
+Check,Matches,Cells,Precision
+Table 1 yield summary statistics,78,78,3 decimals
+Random-walk absolute RMSE,52,52,2 decimals
+DNS-AR relative RMSE,52,52,2 decimals
+DNSS-AR relative RMSE,52,52,2 decimals
+DNS-AR absolute RMSE,52,52,2 decimals
+DNSS-AR absolute RMSE,52,52,2 decimals

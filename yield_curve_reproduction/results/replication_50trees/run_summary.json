@@ -1,0 +1,57 @@
+{
+  "status": "completed_reduced_tree_replication",
+  "forest_trees": 50,
+  "paper_forest_trees": 500,
+  "models": 14,
+  "forecast_metric_rows": 780,
+  "forecast_rows": 111462,
+  "oos_observations_by_horizon": {
+    "1": 125,
+    "3": 123,
+    "6": 120,
+    "12": 114
+  },
+  "fidelity_checks": [
+    {
+      "Check": "Table 1 yield summary statistics",
+      "Matches": 78,
+      "Cells": 78,
+      "Precision": "3 decimals"
+    },
+    {
+      "Check": "Random-walk absolute RMSE",
+      "Matches": 52,
+      "Cells": 52,
+      "Precision": "2 decimals"
+    },
+    {
+      "Check": "DNS-AR relative RMSE",
+      "Matches": 52,
+      "Cells": 52,
+      "Precision": "2 decimals"
+    },
+    {
+      "Check": "DNSS-AR relative RMSE",
+      "Matches": 52,
+      "Cells": 52,
+      "Precision": "2 decimals"
+    },
+    {
+      "Check": "DNS-AR absolute RMSE",
+      "Matches": 52,
+      "Cells": 52,
+      "Precision": "2 decimals"
+    },
+    {
+      "Check": "DNSS-AR absolute RMSE",
+      "Matches": 52,
+      "Cells": 52,
+      "Precision": "2 decimals"
+    }
+  ],
+  "macro_slope_comparisons_improved": 12,
+  "macro_slope_comparisons": 12,
+  "exact_ml_replication_claimed": false,
+  "exact_trading_replication_claimed": false,
+  "time_varying_pso_forecasts_replicated": false
+}

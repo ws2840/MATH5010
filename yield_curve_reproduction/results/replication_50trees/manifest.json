@@ -1,0 +1,107 @@
+{
+  "paper": "https://arxiv.org/html/2608.07536v1",
+  "retrieved_utc": "2026-10-12",
+  "config": {
+    "sample_start": "1986-05",
+    "oos_origin_start": "2015-01",
+    "oos_origin_end": "2025-05",
+    "window_months": 344,
+    "horizons": [
+      1,
+      3,
+      6,
+      12
+    ],
+    "yield_predictor_maturities": [
+      3,
+      6,
+      12,
+      18,
+      24,
+      36,
+      60,
+      120,
+      240,
+      360
+    ],
+    "macro_file": "fred_md_2025_07.csv",
+    "macro_transformation": "paper",
+    "forest_trees": 50,
+    "seed": 42,
+    "signal_calibration_months": 24,
+    "transaction_cost_one_way_bp": 1,
+    "models": [
+      "Direct-RF",
+      "Direct-RF-X",
+      "DNS-AR",
+      "DNS-RF",
+      "DNS-RF-X",
+      "DNSS-AR",
+      "DNSS-RF",
+      "DNSS-RF-X",
+      "DNSS-AR-PSO",
+      "DNSS-RF-PSO",
+      "DNSS-RF-PSO-X",
+      "DNSS-AR-fixedPSO",
+      "DNSS-RF-fixedPSO",
+      "DNSS-RF-fixedPSO-X"
+    ],
+    "pso": {
+      "particles": 300,
+      "iterations": 1000,
+      "local_particles": 10,
+      "stall_tolerance": 1e-08,
+      "stall_iterations": 50,
+      "inertia_start": 0.9,
+      "inertia_end": 0.4,
+      "c1": 2.0,
+      "c2": 2.0,
+      "velocity_fraction": 0.2,
+      "seed": 42,
+      "objective_scale": 1.0
+    },
+    "ar_origin_lag": 0
+  },
+  "sources": [
+    {
+      "file": "data/raw/yield_monthly.csv",
+      "source": "https://drive.google.com/uc?export=download&id=1CdczrQXT6e07ayIczuATtDfYgJN2MLhQ",
+      "sha256": "078c15cc26586f22e94c74eecc3b77925e6691111aff6a5faafba9538fd4c309",
+      "size_bytes": 2792475
+    },
+    {
+      "file": "data/raw/fred_md_2025_07.csv",
+      "source": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/historical-vintages-of-fred-md-2015-01-to-2025-12.zip (member FRED-MD_2025m07.csv)",
+      "sha256": "91e982daa1a29b764f273057a76bc50f66208330636da754955c9f98993bb035",
+      "size_bytes": 657756
+    },
+    {
+      "file": "data/raw/fred_md_2026_07.csv",
+      "source": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/monthly/2026-07-md.csv",
+      "sha256": "cf4a3ea21d90ced696df323870025eae7d8512fd6bbf508cc64792318493682f",
+      "size_bytes": 667882
+    }
+  ],
+  "package_versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  },
+  "source_sha256": {
+    "fetch_data.py": "08817b201eb7dd51147304294d8959f91e8e43e10f4ea70bdad88a099d1a3aba",
+    "make_report.py": "bc489a1a0a62c37d1af72b9be3a3a3ac2826acfa3206e8b5d1e63d974fd319ad",
+    "run.py": "697cd48c19154dc0237f0440b9e55caf736129459858185f51a9f372413ab7c7",
+    "src/yieldcurve/__init__.py": "931df8fc25a1940ad87eb271e7d04d0ca0874e1e6db1dbaa3ffcae8d3391bcd3",
+    "src/yieldcurve/curves.py": "28d3a8005ade66763a63b99087f95df10bda9ae74d0c99398674c20b18ca754e",
+    "src/yieldcurve/data.py": "8385a463b2730dd214c3bdbc3cc945066b3088a7890bc20efddb436427455112",
+    "src/yieldcurve/evaluate.py": "6a42491bac2b0c2079153f702ee1160564c109039117cfa210eb0311c9ca1dd1",
+    "src/yieldcurve/forecast.py": "85f5e6db72be3386a801d5e49fcd6847713b4ed22021491ddd45389153e0fdb5",
+    "src/yieldcurve/trading.py": "c62f76a10a75d8b8e808b00ed47fa208cc1701f4a68a075877df2565502e0de3",
+    "tests/test_scientific_checks.py": "d3812d9ad9627a6222e8fbd13d6d0ed3e6d0959cd8e23acb51ac1635d6ba7934",
+    "tune.py": "703c0cbd3acc92180790c1ee6dcf33ffd2121c924ab7d046222e66133fc9845b",
+    "validate_results.py": "ae0cee7733e2e1c231ea0c0402156db0d719f54a8eca73c1762e504541162e43"
+  },
+  "fingerprint": "56d96c62465fcebe10088c2073239465af1c63f86ee4acc8c95ffa014b151b42"
+}
