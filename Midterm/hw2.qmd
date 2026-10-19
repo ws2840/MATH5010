@@ -48,7 +48,7 @@ for i in range(n_paths):
 t = np.linspace(0, T, n_steps + 1)
 # Plotting
 plt.figure(figsize=(6, 4))
-plt.plot(t, X.T, alpha=0.5, color='blue') 
+plt.plot(t, X.T, alpha=0.5, color='green') 
 plt.title('5000 Geometric Brownian Motion Trajectories')
 plt.xlabel('Time t')
 plt.ylabel('X(t)')
